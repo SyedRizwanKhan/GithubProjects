@@ -7,7 +7,10 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 .main p {
   color: #f94f6d;
   background: #000;
@@ -31,7 +34,6 @@
 }
 .main h2 {
   color: #fff;
-  font-family: math;
   margin-bottom: -30px;
   font-size: 36px;
 }
@@ -53,7 +55,6 @@
     text-align: center;
     margin: 40px 0;
     color: #ffff;
-    font-family: math;
     text-transform: uppercase;
     font-size: 40px;
 }
