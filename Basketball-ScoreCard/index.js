@@ -1,39 +1,126 @@
 let homeScore = document.getElementById("home-score")
 let guestScore = document.getElementById("guest-score")
+let hbtn3 = document.getElementById("hbtn3-hide");
 let homeScoreResult = 0
 let guestScoreResult = 0
 
 function hincrementOne() {
     homeScoreResult += 1
     homeScore.textContent = homeScoreResult
+    if (homeScoreResult > guestScoreResult) {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow= "none"
+    } else {
+        guestScore.style.boxShadow = "0 0 20px #fff"
+        homeScore.style.boxShadow= "none"
+    }
+
 }
 
 function hincrementTwo() {
     homeScoreResult += 2
     homeScore.textContent = homeScoreResult
+    if (homeScoreResult > guestScoreResult) {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow= "none"
+    } else {
+        guestScore.style.boxShadow = "0 0 20px #fff"
+        homeScore.style.boxShadow= "none"
+    }
+
 }
 function hincrementThree() {
     homeScoreResult += 3
     homeScore.textContent = homeScoreResult
+    if (homeScoreResult > guestScoreResult) {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow= "none"
+    } else {
+        guestScore.style.boxShadow = "0 0 20px #fff"
+        homeScore.style.boxShadow= "none"
+    }
+
 }
 
 function gincrementOne() {
     guestScoreResult += 1
     guestScore.textContent = guestScoreResult
+    if (homeScoreResult > guestScoreResult) {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow= "none"
+    } else {
+        guestScore.style.boxShadow = "0 0 20px #fff"
+        homeScore.style.boxShadow= "none"
+    }
+
 }
 
 function gincrementTwo() {
     guestScoreResult += 2
     guestScore.textContent = guestScoreResult
+    if (homeScoreResult > guestScoreResult) {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow= "none"
+    } else {
+        guestScore.style.boxShadow = "0 0 20px #fff"
+        homeScore.style.boxShadow= "none"
+    }
+
 }
 
 function gincrementThree() {
     guestScoreResult += 3
     guestScore.textContent = guestScoreResult
+    if (homeScoreResult > guestScoreResult) {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow= "none"
+    } else {
+        guestScore.style.boxShadow = "0 0 20px #fff"
+        homeScore.style.boxShadow= "none"
+    }
+
 }
-// if(homeScoreResult>guestScoreResult){
-//     homeScore.style.boxShadow="0 0 20px #f94f6dbf"
-// }
+function reset(){
+    homeScoreResult=0
+    guestScoreResult= 0
+    homeScore.textContent = 0
+    guestScore.textContent = 0
+}
+function hdecrementOne() {
+    homeScoreResult -= 1
+    homeScore.textContent = homeScoreResult
+
+}
+function hindecrementTwo() {
+    homeScoreResult -= 2
+    homeScore.textContent = homeScoreResult
+
+}
+function hdecrementThree() {
+    homeScoreResult -= 3
+    homeScore.textContent = homeScoreResult
+    if(homeScoreResult<=0){
+        hbtn3.style.display = "none";
+    }else{
+        hbtn3.style.display="block";
+    }
+
+}
+function gdecrementOne() {
+    guestScoreResult -= 1
+    guestScore.textContent = guestScoreResult
+}
+function gindecrementTwo() {
+    guestScoreResult -= 2
+    guestScore.textContent = guestScoreResult
+
+}
+function gdecrementThree() {
+    guestScoreResult -= 3
+    guestScore.textContent = guestScoreResult
+
+}
+
 
 
 
