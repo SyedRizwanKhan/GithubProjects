@@ -7,7 +7,7 @@
     <title>BasketBall ScoreCard</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="index.js" defer></script>
+    <script src="app.js" defer></script>
     <script
       src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"
       defer
@@ -24,9 +24,9 @@
           <button onclick="hincrementTwo()">+2</button>
           <button onclick="hincrementThree()">+3</button> <br />
           <br />
-          <button onclick="hdecrementOne()">-1</button>
-          <button onclick="hindecrementTwo()">-2</button>
-          <button id="hbtn3-hide" onclick="hdecrementThree()">-3</button>
+          <button id="btn-hide1" onclick="hdecrementOne()">-1</button>
+          <button id="btn-hide2" onclick="hindecrementTwo()">-2</button>
+          <button id="btn-hide3" onclick="hdecrementThree()">-3</button>
         </div>
         <div class="col">
           <h2>TEAM 2</h2>
@@ -35,9 +35,9 @@
           <button onclick="gincrementTwo()">+2</button>
           <button onclick="gincrementThree()">+3</button> <br />
           <br />
-          <button onclick="gdecrementOne()">-1</button>
-          <button onclick="gindecrementTwo()">-2</button>
-          <button onclick="gdecrementThree()">-3</button>
+          <button id="btn-hide4" onclick="gdecrementOne()">-1</button>
+          <button id="btn-hide5" onclick="gindecrementTwo()">-2</button>
+          <button id="btn-hide6" onclick="gdecrementThree()">-3</button>
         </div>
         <div class="reset">
           <button onclick="reset()">reset</button>

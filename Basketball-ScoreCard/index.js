@@ -1,18 +1,25 @@
 let homeScore = document.getElementById("home-score")
 let guestScore = document.getElementById("guest-score")
-let hbtn3 = document.getElementById("hbtn3-hide");
+let btnHide1 = document.getElementById("btn-hide1");
+let btnHide2 = document.getElementById("btn-hide2");
+let btnHide3 = document.getElementById("btn-hide3");
+let btnHide4 = document.getElementById("btn-hide4");
+let btnHide5 = document.getElementById("btn-hide5");
+let btnHide6 = document.getElementById("btn-hide6");
 let homeScoreResult = 0
 let guestScoreResult = 0
 
 function hincrementOne() {
     homeScoreResult += 1
     homeScore.textContent = homeScoreResult
-    if (homeScoreResult > guestScoreResult) {
+    if (homeScoreResult > guestScoreResult || homeScoreResult > 0) {
         homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow= "none"
+        guestScore.style.boxShadow = "none"
+        btnHide1.style.opacity = "1";
+        btnHide1.style.pointerEvents = "initial"
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
-        homeScore.style.boxShadow= "none"
+        homeScore.style.boxShadow = "none"
     }
 
 }
@@ -20,24 +27,28 @@ function hincrementOne() {
 function hincrementTwo() {
     homeScoreResult += 2
     homeScore.textContent = homeScoreResult
-    if (homeScoreResult > guestScoreResult) {
+    if (homeScoreResult > guestScoreResult || homeScoreResult > 0) {
         homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow= "none"
+        guestScore.style.boxShadow = "none"
+        btnHide2.style.opacity = "1";
+        btnHide2.style.pointerEvents = "initial"
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
-        homeScore.style.boxShadow= "none"
+        homeScore.style.boxShadow = "none"
     }
 
 }
 function hincrementThree() {
     homeScoreResult += 3
     homeScore.textContent = homeScoreResult
-    if (homeScoreResult > guestScoreResult) {
+    if (homeScoreResult > guestScoreResult || homeScoreResult > 0) {
         homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow= "none"
+        guestScore.style.boxShadow = "none"
+        btnHide3.style.opacity = "1";
+        btnHide3.style.pointerEvents = "initial"
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
-        homeScore.style.boxShadow= "none"
+        homeScore.style.boxShadow = "none"
     }
 
 }
@@ -45,12 +56,14 @@ function hincrementThree() {
 function gincrementOne() {
     guestScoreResult += 1
     guestScore.textContent = guestScoreResult
-    if (homeScoreResult > guestScoreResult) {
+    if (homeScoreResult > guestScoreResult || guestScoreResult > 0) {
         homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow= "none"
+        guestScore.style.boxShadow = "none"
+        btnHide4.style.opacity = "1";
+        btnHide4.style.pointerEvents = "initial"
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
-        homeScore.style.boxShadow= "none"
+        homeScore.style.boxShadow = "none"
     }
 
 }
@@ -58,12 +71,14 @@ function gincrementOne() {
 function gincrementTwo() {
     guestScoreResult += 2
     guestScore.textContent = guestScoreResult
-    if (homeScoreResult > guestScoreResult) {
+    if (homeScoreResult > guestScoreResult || guestScoreResult > 0) {
         homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow= "none"
+        guestScore.style.boxShadow = "none"
+        btnHide5.style.opacity = "1";
+        btnHide5.style.pointerEvents = "initial"
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
-        homeScore.style.boxShadow= "none"
+        homeScore.style.boxShadow = "none"
     }
 
 }
@@ -71,197 +86,81 @@ function gincrementTwo() {
 function gincrementThree() {
     guestScoreResult += 3
     guestScore.textContent = guestScoreResult
-    if (homeScoreResult > guestScoreResult) {
+    if (homeScoreResult > guestScoreResult || guestScoreResult > 0) {
         homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow= "none"
+        guestScore.style.boxShadow = "none"
+        btnHide6.style.opacity = "1";
+        btnHide6.style.pointerEvents = "initial"
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
-        homeScore.style.boxShadow= "none"
+        homeScore.style.boxShadow = "none"
     }
 
 }
-function reset(){
-    homeScoreResult=0
-    guestScoreResult= 0
+function reset() {
+    homeScoreResult = 0
+    guestScoreResult = 0
     homeScore.textContent = 0
     guestScore.textContent = 0
 }
 function hdecrementOne() {
-    homeScoreResult -= 1
-    homeScore.textContent = homeScoreResult
-
+    if (homeScoreResult <= 0) {
+        btnHide1.style.opacity = "0.5";
+        btnHide1.style.pointerEvents = "none"
+    }
+    else {
+        homeScoreResult -= 1
+        homeScore.textContent = homeScoreResult
+    }
 }
 function hindecrementTwo() {
-    homeScoreResult -= 2
-    homeScore.textContent = homeScoreResult
-
+    if (homeScoreResult <= 0) {
+        btnHide2.style.opacity = "0.5";
+        btnHide2.style.pointerEvents = "none"
+    }
+    else {
+        homeScoreResult -= 2
+        homeScore.textContent = homeScoreResult
+    }
 }
 function hdecrementThree() {
-    homeScoreResult -= 3
-    homeScore.textContent = homeScoreResult
-    if(homeScoreResult<=0){
-        hbtn3.style.display = "none";
-    }else{
-        hbtn3.style.display="block";
-    }
 
+    if (homeScoreResult <= 0) {
+        btnHide3.style.opacity = "0.5";
+        btnHide3.style.pointerEvents = "none"
+    }
+    else {
+        homeScoreResult -= 3
+        homeScore.textContent = homeScoreResult
+    }
 }
 function gdecrementOne() {
-    guestScoreResult -= 1
-    guestScore.textContent = guestScoreResult
+    if (guestScoreResult <= 0) {
+        btnHide4.style.opacity = "0.5";
+        btnHide4.style.pointerEvents = "none"
+    }
+    else {
+        guestScoreResult -= 1
+        guestScore.textContent = guestScoreResult
+    }
 }
 function gindecrementTwo() {
-    guestScoreResult -= 2
-    guestScore.textContent = guestScoreResult
-
+    if (guestScoreResult <= 0) {
+        btnHide5.style.opacity = "0.5";
+        btnHide5.style.pointerEvents = "none"
+    }
+    else {
+        guestScoreResult -= 2
+        guestScore.textContent = guestScoreResult
+    }
 }
 function gdecrementThree() {
-    guestScoreResult -= 3
-    guestScore.textContent = guestScoreResult
-
+    if (guestScoreResult <= 0) {
+        btnHide6.style.opacity = "0.5";
+        btnHide6.style.pointerEvents = "none"
+    }
+    else {
+        guestScoreResult -= 3
+        guestScore.textContent = guestScoreResult
+    }
 }
-
-
-
-
-
-
-// Javascript Alternative Code
-
-// let homeScore = document.getElementById("home-score");
-// let guestScore = document.getElementById("guest-score");
-// let homeScoreResult = 0;
-// let guestScoreResult = 0;
-
-// document.getElementById("home-increment-one").addEventListener("click", function() {
-//     homeScoreResult += 1;
-//     homeScore.textContent = homeScoreResult;
-// });
-
-// document.getElementById("home-increment-two").addEventListener("click", function() {
-//     homeScoreResult += 2;
-//     homeScore.textContent = homeScoreResult;
-// });
-
-// document.getElementById("home-increment-three").addEventListener("click", function() {
-//     homeScoreResult += 3;
-//     homeScore.textContent = homeScoreResult;
-// });
-
-// document.getElementById("guest-increment-one").addEventListener("click", function() {
-//     guestScoreResult += 1;
-//     guestScore.textContent = guestScoreResult;
-// });
-
-// document.getElementById("guest-increment-two").addEventListener("click", function() {
-//     guestScoreResult += 2;
-//     guestScore.textContent = guestScoreResult;
-// });
-
-// document.getElementById("guest-increment-three").addEventListener("click", function() {
-//     guestScoreResult += 3;
-//     guestScore.textContent = guestScoreResult;
-// });
-
-
-
-
-// Professional and Optimized Javascript ConvolverNode
-
-// const homeScore = document.getElementById("home-score");
-// const guestScore = document.getElementById("guest-score");
-// let homeScoreResult = 0;
-// let guestScoreResult = 0;
-
-// const updateScore = (element, score) => {
-//     element.textContent = score;
-// };
-
-// const hincrement = (value) => {
-//     homeScoreResult += value;
-//     updateScore(homeScore, homeScoreResult);
-// };
-
-// const gincrement = (value) => {
-//     guestScoreResult += value;
-//     updateScore(guestScore, guestScoreResult);
-// };
-
-// document.querySelectorAll('.main button[onclick^="hincrement"]').forEach(button => {
-//     button.addEventListener('click', () => {
-//         hincrement(Number(button.textContent.trim()));
-//     });
-// });
-
-// document.querySelectorAll('.main button[onclick^="gincrement"]').forEach(button => {
-//     button.addEventListener('click', () => {
-//         gincrement(Number(button.textContent.trim()));
-//     });
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Jquery Version
-
-
-// let homeScore = $("#home-score");
-// let guestScore = $("#guest-score");
-// let homeScoreResult = 0;
-// let guestScoreResult = 0;
-
-// $('.hincrement-one').click(function() {
-//     homeScoreResult += 1;
-//     homeScore.text(homeScoreResult);
-// });
-
-// $('.hincrement-two').click(function() {
-//     homeScoreResult += 2;
-//     homeScore.text(homeScoreResult);
-// });
-
-// $('.hincrement-three').click(function() {
-//     homeScoreResult += 3;
-//     homeScore.text(homeScoreResult);
-// });
-
-// $('.gincrement-one').click(function() {
-//     guestScoreResult += 1;
-//     guestScore.text(guestScoreResult);
-// });
-
-// $('.gincrement-two').click(function() {
-//     guestScoreResult += 2;
-//     guestScore.text(guestScoreResult);
-// });
-
-// $('.gincrement-three').click(function() {
-//     guestScoreResult += 3;
-//     guestScore.text(guestScoreResult);
-// });
