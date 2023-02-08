@@ -12,11 +12,13 @@ let guestScoreResult = 0
 function hincrementOne() {
     homeScoreResult += 1
     homeScore.textContent = homeScoreResult
-    if (homeScoreResult > guestScoreResult || homeScoreResult > 0) {
+    if (homeScoreResult > guestScoreResult) {
         homeScore.style.boxShadow = "0 0 20px #fff"
         guestScore.style.boxShadow = "none"
-        btnHide1.style.opacity = "1";
-        btnHide1.style.pointerEvents = "initial"
+        if (homeScoreResult > 0) {
+            btnHide1.style.opacity = "1";
+            btnHide1.style.pointerEvents = "initial"
+        }
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
         homeScore.style.boxShadow = "none"
@@ -27,11 +29,13 @@ function hincrementOne() {
 function hincrementTwo() {
     homeScoreResult += 2
     homeScore.textContent = homeScoreResult
-    if (homeScoreResult > guestScoreResult || homeScoreResult > 0) {
+    if (homeScoreResult > guestScoreResult) {
         homeScore.style.boxShadow = "0 0 20px #fff"
         guestScore.style.boxShadow = "none"
-        btnHide2.style.opacity = "1";
-        btnHide2.style.pointerEvents = "initial"
+        if (homeScoreResult > 0) {
+            btnHide2.style.opacity = "1";
+            btnHide2.style.pointerEvents = "initial"
+        }
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
         homeScore.style.boxShadow = "none"
@@ -41,11 +45,13 @@ function hincrementTwo() {
 function hincrementThree() {
     homeScoreResult += 3
     homeScore.textContent = homeScoreResult
-    if (homeScoreResult > guestScoreResult || homeScoreResult > 0) {
+    if (homeScoreResult > guestScoreResult) {
         homeScore.style.boxShadow = "0 0 20px #fff"
         guestScore.style.boxShadow = "none"
-        btnHide3.style.opacity = "1";
-        btnHide3.style.pointerEvents = "initial"
+        if (homeScoreResult > 0) {
+            btnHide3.style.opacity = "1";
+            btnHide3.style.pointerEvents = "initial"
+        }
     } else {
         guestScore.style.boxShadow = "0 0 20px #fff"
         homeScore.style.boxShadow = "none"
@@ -56,14 +62,16 @@ function hincrementThree() {
 function gincrementOne() {
     guestScoreResult += 1
     guestScore.textContent = guestScoreResult
-    if (homeScoreResult > guestScoreResult || guestScoreResult > 0) {
-        homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow = "none"
-        btnHide4.style.opacity = "1";
-        btnHide4.style.pointerEvents = "initial"
-    } else {
+    if (guestScoreResult > homeScoreResult) {
         guestScore.style.boxShadow = "0 0 20px #fff"
         homeScore.style.boxShadow = "none"
+        if (guestScoreResult > 0) {
+            btnHide4.style.opacity = "1";
+            btnHide4.style.pointerEvents = "initial"
+        }
+    } else {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow = "none"
     }
 
 }
@@ -71,14 +79,16 @@ function gincrementOne() {
 function gincrementTwo() {
     guestScoreResult += 2
     guestScore.textContent = guestScoreResult
-    if (homeScoreResult > guestScoreResult || guestScoreResult > 0) {
-        homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow = "none"
-        btnHide5.style.opacity = "1";
-        btnHide5.style.pointerEvents = "initial"
-    } else {
+    if (guestScoreResult > homeScoreResult) {
         guestScore.style.boxShadow = "0 0 20px #fff"
         homeScore.style.boxShadow = "none"
+        if (guestScoreResult > 0) {
+            btnHide5.style.opacity = "1";
+            btnHide5.style.pointerEvents = "initial"
+        }
+    } else {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow = "none"
     }
 
 }
@@ -86,14 +96,16 @@ function gincrementTwo() {
 function gincrementThree() {
     guestScoreResult += 3
     guestScore.textContent = guestScoreResult
-    if (homeScoreResult > guestScoreResult || guestScoreResult > 0) {
-        homeScore.style.boxShadow = "0 0 20px #fff"
-        guestScore.style.boxShadow = "none"
-        btnHide6.style.opacity = "1";
-        btnHide6.style.pointerEvents = "initial"
-    } else {
+    if (guestScoreResult > homeScoreResult) {
         guestScore.style.boxShadow = "0 0 20px #fff"
         homeScore.style.boxShadow = "none"
+        if (guestScoreResult > 0) {
+            btnHide6.style.opacity = "1";
+            btnHide6.style.pointerEvents = "initial"
+        }
+    } else {
+        homeScore.style.boxShadow = "0 0 20px #fff"
+        guestScore.style.boxShadow = "none"
     }
 
 }
@@ -111,9 +123,13 @@ function hdecrementOne() {
     else {
         homeScoreResult -= 1
         homeScore.textContent = homeScoreResult
+        if (homeScoreResult < guestScoreResult) {
+            guestScore.style.boxShadow = "0 0 20px #fff"
+            homeScore.style.boxShadow = "none"
+        }
     }
 }
-function hindecrementTwo() {
+function hdecrementTwo() {
     if (homeScoreResult <= 0) {
         btnHide2.style.opacity = "0.5";
         btnHide2.style.pointerEvents = "none"
@@ -121,6 +137,10 @@ function hindecrementTwo() {
     else {
         homeScoreResult -= 2
         homeScore.textContent = homeScoreResult
+        if (homeScoreResult < guestScoreResult) {
+            guestScore.style.boxShadow = "0 0 20px #fff"
+            homeScore.style.boxShadow = "none"
+        }
     }
 }
 function hdecrementThree() {
@@ -132,6 +152,10 @@ function hdecrementThree() {
     else {
         homeScoreResult -= 3
         homeScore.textContent = homeScoreResult
+        if (homeScoreResult < guestScoreResult) {
+            guestScore.style.boxShadow = "0 0 20px #fff"
+            homeScore.style.boxShadow = "none"
+        }
     }
 }
 function gdecrementOne() {
@@ -142,9 +166,13 @@ function gdecrementOne() {
     else {
         guestScoreResult -= 1
         guestScore.textContent = guestScoreResult
+        if (guestScoreResult < homeScoreResult) {
+            homeScore.style.boxShadow = "0 0 20px #fff"
+            guestScore.style.boxShadow = "none"
+        }
     }
 }
-function gindecrementTwo() {
+function gdecrementTwo() {
     if (guestScoreResult <= 0) {
         btnHide5.style.opacity = "0.5";
         btnHide5.style.pointerEvents = "none"
@@ -152,6 +180,10 @@ function gindecrementTwo() {
     else {
         guestScoreResult -= 2
         guestScore.textContent = guestScoreResult
+        if (guestScoreResult < homeScoreResult) {
+            homeScore.style.boxShadow = "0 0 20px #fff"
+            guestScore.style.boxShadow = "none"
+        }
     }
 }
 function gdecrementThree() {
@@ -162,5 +194,9 @@ function gdecrementThree() {
     else {
         guestScoreResult -= 3
         guestScore.textContent = guestScoreResult
+        if (guestScoreResult < homeScoreResult) {
+            homeScore.style.boxShadow = "0 0 20px #fff"
+            guestScore.style.boxShadow = "none"
+        }
     }
 }
