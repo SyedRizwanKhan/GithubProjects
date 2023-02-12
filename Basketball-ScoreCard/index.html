@@ -18,7 +18,7 @@
       <h1>BasketBall Score Card</h1>
       <div class="main">
         <div class="col">
-          <h2>TEAM 1</h2>
+          <h2>TEAM A</h2>
           <p id="home-score">0</p>
           <button onclick="hincrementOne()">+1</button>
           <button onclick="hincrementTwo()">+2</button>
@@ -29,7 +29,7 @@
           <button id="btn-hide3" onclick="hdecrementThree()">-3</button>
         </div>
         <div class="col">
-          <h2>TEAM 2</h2>
+          <h2>TEAM B</h2>
           <p id="guest-score">0</p>
           <button onclick="gincrementOne()">+1</button>
           <button onclick="gincrementTwo()">+2</button>
@@ -40,7 +40,8 @@
           <button id="btn-hide6" onclick="gdecrementThree()">-3</button>
         </div>
         <div class="reset">
-          <button onclick="reset()">reset</button>
+          <button onclick="reset()">Save Score</button>
+          <span id="final-score"></span>
         </div>
       </div>
     </section>

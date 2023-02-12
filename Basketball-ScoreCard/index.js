@@ -6,6 +6,7 @@ let btnHide3 = document.getElementById("btn-hide3");
 let btnHide4 = document.getElementById("btn-hide4");
 let btnHide5 = document.getElementById("btn-hide5");
 let btnHide6 = document.getElementById("btn-hide6");
+let finalScore = document.getElementById("final-score");
 let homeScoreResult = 0
 let guestScoreResult = 0
 
@@ -109,12 +110,7 @@ function gincrementThree() {
     }
 
 }
-function reset() {
-    homeScoreResult = 0
-    guestScoreResult = 0
-    homeScore.textContent = 0
-    guestScore.textContent = 0
-}
+
 function hdecrementOne() {
     if (homeScoreResult <= 0) {
         btnHide1.style.opacity = "0.5";
@@ -199,4 +195,15 @@ function gdecrementThree() {
             guestScore.style.boxShadow = "none"
         }
     }
+}
+
+function reset() {
+    let getResult = "A: " + homeScoreResult + ", B: " + guestScoreResult + " - "
+    finalScore.textContent += getResult
+    homeScoreResult = 0
+    guestScoreResult = 0
+    homeScore.textContent = 0
+    guestScore.textContent = 0
+    homeScore.style.boxShadow = "initial"
+    guestScore.style.boxShadow = "initial"
 }
